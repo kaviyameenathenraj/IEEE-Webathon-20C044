@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign in</title>
+    <style>                                                        
+        input {
+            height: 20px;                                              
+        }
+        form {
+            background-color: rgba(226, 226, 226, 0.685);
+            padding: 50px;
+            border-radius: 20px;
+            width: fit-content;
+            margin: auto;
+        }
+        button {
+            padding: 10px 20px;
+            border:2px solid grey;
+            border-radius:5px;                                
+            background-color:rgb(102, 102, 102);                    
+            color: white;                                    
+            font-size:15px;                                  
+        }
+        button:hover{
+            background-color: rgb(62, 153, 62);
+        }
+        body{
+            background-image: url('ebook2.jpg');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: max-content;
+        }  
+    </style>
+</head>
+<body style="text-align: center;margin-top: 50px;font-size: 20px;">        
+    <h2>Sign In</h2>
+    <form>
+        <label><b>EMAIL ID :   </b> </label>
+        <input id = "emailid" type = "text" placeHolder = "">
+        <br>
+        <br>
+        <label><b>PASSWORD :   </b> </label>
+        <input id = "password" type = "text" placeHolder = "">
+        <br>
+        <br>
+        <button onClick = "report()" id ="b1">Submit</button>
+        
+    </form>
+    <script type= "text/javascript">
+        function number_check(s){
+            if(isNaN(s)){
+                console.log("true")
+                return true;
+            }else{
+                console.log("False")
+                return false;
+            }
+        }
+            function report(){
+               
+                var Emailid= document.getElementById("emailid").value;
+                
+                var Password= document.getElementById("password").value;
+               
+                console.log(Emailid)
+                if ((Emailid=="")|| (Password==""))
+                    alert("Please fill all the details!")
+                else{
+                    alert("Signed in Successfully!")
+                    var i=1;
+                    }
+
+                  /* if(i)
+                     window.open('https://courses.tce.edu/')*/
+}                      
+</script>  
+</body>
+</html>

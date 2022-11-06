@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign up</title>
+    <style>                                                        
+        input {
+            height: 20px;                                              
+        }
+        form {
+            background-color: rgba(226, 226, 226, 0.685);
+            padding: 50px;
+            border-radius: 20px;
+            width: fit-content;
+            margin: auto;
+        }
+        button {
+            padding: 10px 20px;
+            border:2px solid grey;
+            border-radius:5px;                                
+            background-color:rgb(102, 102, 102);                    
+            color: white;                                    
+            font-size:15px;                                  
+        }
+        button:hover{
+            background-color: rgb(62, 153, 62);
+        }
+        body{
+            background-image: url('ebook.jpg');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: max-content;
+        }  
+    </style>
+</head>
+<body style="text-align: center;margin-top: 50px;font-size: 20px;">        
+    <h2>Sign Up</h2>
+    <form>
+        <label><b>NAME :   </b> </label>
+        <input id = "name" type = "text" placeHolder = "">
+        <br>
+        <br>
+        <label><b>EMAIL ID :   </b> </label>
+        <input id = "emailid" type = "text" placeHolder = "">
+        <br>
+        <br>
+        <label><b>PHONE NUMBER :    </b></label>
+        <input id = "phone_no" type = "text" placeHolder = "">
+        <br>
+        <br>
+        <label><b> COURSE :    </b></label>
+        <input id = "course" type = "text" placeHolder = "">
+        <br>
+        <br>
+        <label><b>YEAR :    </b></label>
+        <input id = "year" type = "text" placeHolder = "">
+        <br>
+        <br>
+        <label><b>DEPARTMENT :   </b> </label>
+        <input id = "dept" type = "text" placeHolder = "">
+        <br>
+        <br>
+        <label><b>ROLL NO :   </b> </label>
+        <input id = "rollno" type = "text" placeHolder = "">
+        <br>
+        <br>
+        <button onClick = "report()" id ="b1">Submit</button>
+       
+    </form>
+        <script type= "text/javascript">
+            function number_check(s){
+                if(isNaN(s)){
+                    console.log("true")
+                    return true;
+                }else{
+                    console.log("False")
+                    return false;
+                }
+            }
+                function report(){
+                    var Name=document.getElementById("name").value;
+                    var Emailid= document.getElementById("emailid").value;
+                    var Phone_no= document.getElementById("phone_no").value;
+                    var Course= document.getElementById("course").value;
+                 
+                    var Year= document.getElementById("year").value;
+                    var Dept= document.getElementById("dept").value;
+                    var Rollno= document.getElementById("rollno").value;
+                    console.log(Phone_no)
+                    if ((Name=="")||(Emailid=="")||(Phone_no=="")||(Course=="")||(Year=="")||(Dept=="")|| (Rollno==""))
+                        alert("Please fill all the details!")
+                    else{
+                        if((Phone_no.length!=10)||(number_check(Phone_no))){
+                            alert("Invalid Phone Number!")
+                            return;
+                        }
+                        if(number_check(Year)){
+                            alert("Year field cannot contain characters!")
+                            return;
+                        }  
+                       
+                        if(number_check(Rollno)){
+                            alert("Roll number field cannot contain characters!")
+                            return;
+                        }
+                        alert("Signed up Successfully")
+                        var i=1;
+                        }
+
+                      /* if(i)
+                         window.open('https://courses.tce.edu/')*/
+ }                      
+ </script>  
+</body>
+</html>
